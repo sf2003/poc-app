@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(name = "poc-service")
+@FeignClient(name = "POC-SERVICE")
 public interface ExtractClient {
     @RequestMapping(method = {RequestMethod.GET}, value = "/user/findUserById")
     JSONObject findUserById(@RequestParam(name = "userId") Long userId);
