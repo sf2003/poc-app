@@ -1,0 +1,30 @@
+security:
+  ignored: /css/**,/js/**,/bootstrap/**, /favicon.ico,/webjars/**
+  user:
+    password: none
+  oauth2:
+    resource:
+      jwt:
+        keyValue: 123
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 600000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+
+zuul:
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 600000
+    connect-timeout-millis: 600000
